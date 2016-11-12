@@ -36,4 +36,5 @@ SSH 为建立在应用层和传输层基础上的安全协议。
 5_20
 如果在前面你设置了Key Passphrase ，那么此时就会提示你输入密码的。为了更加安全建议大家要设置一个Key Passphrase。
 
+
 [putty下载地址](http://www.putty.org/)

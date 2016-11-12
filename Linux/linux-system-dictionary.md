@@ -23,4 +23,5 @@ Linux系统目录
 
 **/var：** 这是一个非常重要的目录，系统上跑了很多程序，那么每个程序都会有相应的日志产生，而这些日志就被记录到这个目录下，具体在/var/log 目录下，另外mail的预设放置也是在这里。
 
+#Reference
 [Linux系统目录结构](http://www.runoob.com/linux/linux-system-contents.html)
