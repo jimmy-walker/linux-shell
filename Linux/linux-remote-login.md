@@ -2,9 +2,9 @@
 Linux系统中是通过ssh服务实现的远程登录功能，默认ssh服务端口号为 22。 
 Window系统上 Linux 远程登录客户端有SecureCRT, Putty, SSH Secure Shell等，以下以Putty为例来登录远程服务器。
 
-
 如果你下载了putty，请双击putty.exe 然后弹出如下的窗口。
-5_1
+![](/assets/putty configuration.png)
+
 在Host Name( or IP address) 下面的框中输入你要登录的远程服务器IP(可以通过ifconfig命令查看服务器ip)，然后回车。
 5_12
 此时，提示我们输入要登录的用户名。
