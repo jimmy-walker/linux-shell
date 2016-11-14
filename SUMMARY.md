@@ -9,4 +9,5 @@
     * [Linux vi vim](Linux/linux-vi-vim.md)
     * [Linux package](Linux/linux-package.md)
 * [Shell brief](Shell/shell-brief.md)
+    * [Shell echo](Shell/shell-echo.md)
 
