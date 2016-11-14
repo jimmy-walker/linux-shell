@@ -31,5 +31,4 @@ Ubuntu中的高级包管理方法apt-get。（dpkg绕过apt包管理数据库对
 #Reference
 
 - [apt-get 与 yum 的区别](http://www.cnblogs.com/ivantang/p/4620961.html)
-
 - [dpkg ---- apt-get ------ aptitude 三种方式的区别 及命令格式](http://blog.csdn.net/xiaoyanghuaban/article/details/22946987)
