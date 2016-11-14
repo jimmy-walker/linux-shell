@@ -47,42 +47,31 @@ total 64
  #-p ：帮助你直接将所需要的目录(包含上一级目录)递回创建起来！
     ```
 
- rmdir：删除一个空的目录()，注意若尚有内容，则无法删除。
+    rmdir：删除一个空的目录()，注意若尚有内容，则无法删除。
 
- cp: 复制文件或目录(copy)
+    cp: 复制文件或目录(copy)
 
- ```shell
-
+    ```shell
  [root@www ~]# cp [options] source1 source2 source3 .... directory
-
  #-a：相当於 -pdr 的意思，至於 pdr 请参考下列说明；(常用)
-
  #-r：递回持续复制，用於目录的复制行为；(常用)
+    ```
 
- ```
+    rm: 移除文件或目录(remove)
 
- rm: 移除文件或目录(remove)
-
- mv: 移动文件与目录，或修改名称(move)
-
- ```shell
-
+    mv: 移动文件与目录，或修改名称(move)
+    
+    ```shell
  [root@www ~]# mv [options] source1 source2 source3 .... directory
-
- ```
+    ```
 
 3. 文件内容查看，可以使用 man(manual)命令来查看各个命令的使用文档，如 ：`man cp`
 
- **cat**：一次显示整个文件:`cat filename`；从键盘创建一个文件:`cat > filename`只能创建新文件,不能编辑已有文件；将几个文件合并为一个文件:`cat file1 file2 > file`(concatenate)
+    **cat**：一次显示整个文件:`cat filename`；从键盘创建一个文件:`cat > filename`只能创建新文件,不能编辑已有文件；将几个文件合并为一个文件:`cat file1 file2 > file`(concatenate)
 
- ```shell
-
+    ```shell
  [root@www ~]# cat /etc/issue
-
  CentOS release 6.4 (Final)
-
  Kernel \r on an \m
-
  #-n, --number 对输出的所有行编号,由1开始对所有输出的行数编号
-
- ```
+    ```
