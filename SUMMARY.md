@@ -8,4 +8,5 @@
     * [Linux directory management](Linux/linux-directory-management.md)
     * [Linux vi vim](Linux/linux-vi-vim.md)
     * [Linux package](Linux/linux-package.md)
+* [Shell brief](Shell/shell-brief.md)
 
