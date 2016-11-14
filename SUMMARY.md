@@ -4,4 +4,5 @@
 * [Linux brief](Linux/linux-brief.md)
     * [Linux system dictionary](Linux/linux-system-dictionary.md)
     * [Linux remote login](Linux/linux-remote-login.md)
+    * [Linux file property](Linux/linux-file-property.md)
 
