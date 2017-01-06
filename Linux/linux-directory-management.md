@@ -67,7 +67,7 @@ total 64
 
 3. 文件内容查看，可以使用 man(manual)命令来查看各个命令的使用文档，如 ：`man cp`
 
-    **cat**：一次显示整个文件:`cat filename`；从键盘创建一个文件:`cat > filename`只能创建新文件,不能编辑已有文件；将几个文件合并为一个文件:`cat file1 file2 > file`(concatenate)
+    cat：一次显示整个文件:`cat filename`；从键盘创建一个文件:`cat > filename`只能创建新文件,不能编辑已有文件；将几个文件合并为一个文件:`cat file1 file2 > file`(concatenate)
 
     ```shell
  [root@www ~]# cat /etc/issue
