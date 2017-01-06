@@ -75,3 +75,17 @@ total 64
  Kernel \r on an \m
  #-n, --number 对输出的所有行编号,由1开始对所有输出的行数编号
     ```
+
+    head：取出文件前面几行，默认的情况中，显示前面 10 行！若要显示前 20 行，就得要这样：
+
+    ```shell
+  [root@www ~]# head -n 20 /etc/man.config
+
+    ```
+
+    head：取出文件后面几行,，默认的情况中，显示最后的十行！若要显示最后的 20 行，就得要这样：
+
+    ```shell 
+  [root@www ~]# tail -n 20 /etc/man.config
+
+    ```
