@@ -10,7 +10,7 @@
     `top -d 3
     //表示更新周期为3秒`
 
- 2.重定向符>>，比如cmd >> file 把 stdout 重定向到 file 文件中(追加)；
+2. 重定向符>>，比如cmd >> file 把 stdout 重定向到 file 文件中(追加)；
 
     `top -d 1 >> record.log`
     
