@@ -18,7 +18,7 @@ done
 #！/bin/bash
 while true
 do
-	echo $(($RANDOM%10+1)) >> top.log
-	sleep 3
+    echo $(($RANDOM%10+1)) >> top.log
+    sleep 3
 done
 ```
