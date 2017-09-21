@@ -36,7 +36,7 @@
 
     `/word`：向光标之下寻找一个名称为 word 的字符串。例如要在档案内搜寻 vbird 这个字符串，就输入 /vbird 即可！ (常用)
 
-    `:nohlsearch`命令可以使得高亮寻找关闭。（常用）
+    `:nohlsearch`命令可以使得高亮寻找关闭。记忆为no highlight search。（常用）
 
     `?word`：向光标之上寻找一个字符串名称为 word 的字符串。
 
