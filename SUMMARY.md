@@ -12,4 +12,5 @@
 * [Shell brief](Shell/shell-brief.md)
     * [Shell echo](Shell/shell-echo.md)
     * [Shell while](Shell/shell-while.md)
+    * [Shell if](Shell/shell-if.md)
 
