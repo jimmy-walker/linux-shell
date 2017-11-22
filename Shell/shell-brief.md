@@ -11,6 +11,27 @@ Shell 脚本（shell script），是一种为shell编写的脚本程序。
 
 Linux的Shell种类众多，其中**Bash( Bourne Again Shell)（/bin/bash）**在日常工作中被广泛使用。同时，Bash也是大多数Linux系统默认的Shell。
 
+我们可以在执行 Shell 脚本时，向脚本传递参数，脚本内获取参数的格式为：**$n**。**n** 代表一个数字，1 为执行脚本的第一个参数，2 为执行脚本的第二个参数，以此类推。
+
+```shell
+#!/bin/bash
+echo "Shell 传递参数实例！";
+echo "执行的文件名：$0";
+echo "第一个参数为：$1";
+echo "第二个参数为：$2";
+echo "第三个参数为：$3";
+
+$ chmod +x test.sh 
+$ ./test.sh 1 2 3
+Shell 传递参数实例！
+执行的文件名：./test.sh
+第一个参数为：1
+第二个参数为：2
+第三个参数为：3
+```
+
+
+
 #Command
 
 1. 编辑shell脚本：打开文本编辑器(可以使用vi/vim命令来创建文件)，新建一个文件test.sh，扩展名为sh（sh代表shell）
