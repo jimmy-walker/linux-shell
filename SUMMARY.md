@@ -9,6 +9,7 @@
     * [Linux vi vim](Linux/linux-vi-vim.md)
     * [Linux package](Linux/linux-package.md)
     * [Linux system management](Linux/linux-system-management.md)
+    * [Linux shortcut](Linux/linux-shortcut.md)
 * [Shell brief](Shell/shell-brief.md)
     * [Shell echo](Shell/shell-echo.md)
     * [Shell while](Shell/shell-while.md)
