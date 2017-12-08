@@ -14,7 +14,7 @@
 
     1. 常见的安装包格式 deb包,安装deb包的命令是“dpkg -参数”，dpkg 是Debian Package的简写，为 Debian专门开发的套件管理系统，方便软件的安装、更新及移除。
 
-    2. 包管理工具 apt-get
+    2. 包管理工具 apt-get（Advanced Packaging Tools，缩写为APT）
 
     3. 支持tar包
 
