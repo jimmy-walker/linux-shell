@@ -14,6 +14,7 @@
     * [Linux other function](Linux/linux-otherfunction.md)
 * [Shell brief](Shell/shell-brief.md)
     * [Shell echo](Shell/shell-echo.md)
+    * [Shell variable](Shell/shell-variable.md)
     * [Shell while](Shell/shell-while.md)
     * [Shell if](Shell/shell-if.md)
     * [Shell date](Shell/shell-date.md)
