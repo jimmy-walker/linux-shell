@@ -68,7 +68,7 @@ Hello, I know you are "runoob"!
 your_name="runoob"
 # 使用双引号拼接
 greeting="hello, "$your_name" !"
-greeting_1="hello, ${your_name} !"
+greeting_1="hello, ${your_name} !" #J我建议使用这种，双引号，里面直接用变量。
 echo $greeting  $greeting_1
 # 使用单引号拼接
 greeting_2='hello, '$your_name' !'
