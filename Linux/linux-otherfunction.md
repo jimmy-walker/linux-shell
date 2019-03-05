@@ -59,3 +59,45 @@ grep apple fruitlist.txt | grep -v pineapple > apples.txt
 - -x或--line-regexp 只显示全列符合的列。
 - -y 此参数的效果和指定"-i"参数相同。
 - --help 在线帮助。
+
+## export
+
+Linux export命令用于设置或显示环境变量。
+
+在shell中执行程序时，shell会提供一组环境变量。export可新增，修改或删除环境变量，供后续执行的程序使用。**export的效力仅及于该次登陆操作。**
+
+### 命令格式
+
+```
+export [-fnp][变量名称]=[变量设置值]
+```
+
+```linux
+export -p //列出当前的环境变量值
+export BERT_BASE_DIR=model/chinese_L-12_H-768_A-12
+export INPUT_FILE=data/lm/test.zh.tsv
+python run_lm_predict.py \
+  --input_file=$INPUT_FILE \
+  --vocab_file=$BERT_BASE_DIR/vocab.txt \
+  --bert_config_file=$BERT_BASE_DIR/bert_config.json \
+  --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt \
+  --max_seq_length=128 \
+  --output_dir=/tmp/lm_output/
+```
+
+###参数说明
+
+- -f 　代表[变量名称]中为函数名称。
+- -n 　删除指定的变量。变量实际上并未删除，只是不会输出到后续指令的执行环境中。
+- -p 　列出所有的shell赋予程序的环境变量。
+
+## help
+
+**help命令**用于显示shell内部命令的帮助信息。help命令只能显示shell内部的命令帮助信息。而对于外部命令的帮助信息只能使用[man](http://man.linuxde.net/man)或者[info](http://man.linuxde.net/info)命令查看。 
+
+###命令格式
+
+```
+help [option] command
+```
+
