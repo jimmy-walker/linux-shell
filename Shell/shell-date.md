@@ -22,3 +22,11 @@ $ ./test.sh 2017-11-22
 起始日期为：2017-10-25
 截止日期为：2017-11-21
 ```
+得到当前日期
+
+```bash
+DATE=`date "+%Y%m%d"`
+
+DATE_WITH_TIME=`date "+%Y%m%d-%H%M%S"` #add %3N as we want millisecond too
+```
+
