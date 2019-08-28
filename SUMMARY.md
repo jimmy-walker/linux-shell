@@ -18,3 +18,4 @@
     * [Shell while](Shell/shell-while.md)
     * [Shell if](Shell/shell-if.md)
     * [Shell date](Shell/shell-date.md)
+    * [Shell input](Shell/shell-input.md)
