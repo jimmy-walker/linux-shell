@@ -101,3 +101,19 @@ python run_lm_predict.py \
 help [option] command
 ```
 
+## rsync
+
+```
+rsync -avz -e 'ssh -p 32200' senddir/ baseDepSarch@10.1.XXX.18:file/upload
+
+rsync -avz -e 'ssh -p 32200' baseDepSarch@10.1.XXX.18:file/download/ receivedir/
+```
+
+在跳板机使用，从而替代`rz/sz`的作用进行传输文件。
+
+```
+-a --archive  ：归档模式，表示递归传输并保持文件属性
+-v：显示rsync过程中详细信息。可以使用"-vvvv"获取更详细信息。
+-z        ：传输时进行压缩提高效率。
+```
+
