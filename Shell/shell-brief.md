@@ -48,4 +48,53 @@ Shell 传递参数实例！
     ./test.sh #执行脚本
     ```
 
+# Example
+
+在结点上运行脚本
+
+```shell
+#!/bin/bash
+##********************************************************************#
+##
+## 日期支持运算，通过以下方式：
+## ${DATA_DATE offset field formatter}，
+## DATE_DATE：*固定值，为当前作业的业务时间
+## offet：*必填，当前的日期偏移量，根据field判定偏移字段，取值为数值可正可负
+## field：*必填，偏移的字段，取值可以为：day，month，year，minute，hour，week，second
+## formatter：选填，计算偏移后的日期格式，如：yyyy-MM-dd HH:mm:ss
+## 如：${DATA_DATE -1 day 'yyyy-MM-dd HH:mm'}
+##********************************************************************#
+source $BIPROG_ROOT/bin/shell/common.sh
+
+###定义内部变量##################
+vDay=${DATA_DATE} #yesterday
+#yyyy_mm_dd_1=`date -d "$vDay" +%Y-%m-%d` #yesterday
+yyyy_mm_dd_1="2020-12-13"
+yyyy_mm_dd_2=`date -d "$vDay -1 days" +%Y-%m-%d` #2 days ago
+yyyy_mm_dd_3=`date -d "$vDay -2 days" +%Y-%m-%d` #3 days ago
+yyyy_mm_dd_5=`date -d "$vDay -4 days" +%Y-%m-%d` #5 days ago
+#vEdition="9156"
+vEdition="9355"
+start_time="${yyyy_mm_dd_1} 00:00:00.000"
+end_time="${yyyy_mm_dd_1} 23:59:59.999"
+
+############################ 功能执行部分 ############################
+
+dst_path=/data1/baseDepSarch/search_doublecheck_qq
+#dst_path=/data2/web_service/play_time
+filename="correctfind_qq"
+filename_txt="${filename}_${yyyy_mm_dd_1_format}.txt"
+
+CMD="hive -e \"
+set hive.cli.print.header=false;
+set mapreduce.job.queuename=root.XXXXXXXXXXXQueue;
+select prev_word, final, qq_check from temp.XXXXXXX_query_find_correct_part_qq_double_request_orc_search_hot 
+where cdt='${yyyy_mm_dd_1}' and qq_check='true'; \"
+> '${dst_path}/tmp_${filename_txt}'"
+EXESH_CMD
+
+check_file_size "${dst_path}/tmp_${filename_txt}"
+
+rm "${dst_path}/tmp_${filename_txt}"
+```
 
