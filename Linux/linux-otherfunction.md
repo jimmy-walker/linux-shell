@@ -60,6 +60,19 @@ grep apple fruitlist.txt | grep -v pineapple > apples.txt
 - -y 此参数的效果和指定"-i"参数相同。
 - --help 在线帮助。
 
+### 实例
+
+#### 获取最新的分区
+
+```bash
+mixsongid_partition="set hive.cli.print.header=false;show partitions temp.search_near_mixsong_info "
+mixsongid_lastest_partition=`hive -S -e  "$mixsongid_partition" | grep -E '[0-9]{4}-[0-1][0-9]-[0-3][0-9]' | grep '=2' | sort | tail -n 1` #hive -S 静默模式，不输出调试信息，只输出结果，否则会输出耗时信息，-e 从命令行执行指定的 HQL， -E正则表达式
+vmixsongid=${mixsongid_lastest_partition:21:20}
+echo ${vmixsongid}
+```
+
+
+
 ## export
 
 Linux export命令用于设置或显示环境变量。
