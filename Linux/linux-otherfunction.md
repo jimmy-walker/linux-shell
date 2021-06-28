@@ -130,3 +130,14 @@ rsync -avz -e 'ssh -p 32200' baseDepSarch@10.1.XXX.18:file/download/ receivedir/
 -z        ：传输时进行压缩提高效率。
 ```
 
+## tr
+
+translate的缩写。Linux tr 命令用于转换或删除文件中的字符。
+
+```bash
+cat tmp | tr " " "*" | tr "\t" "&"
+#将空格和tab符号显示出啦
+cat testfile |tr a-z A-Z 
+#大小写转换
+```
+
