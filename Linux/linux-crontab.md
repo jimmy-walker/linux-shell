@@ -171,6 +171,10 @@ def process1(logger):
         if os.path.exists(rmpath):
             os.remove(rmpath)
             logger.info("remove file %s done"%(rmpath))
+            #os.system("/data1/XXXXX/upload/apache-cat-8.5.71/bin/shutdown.sh")
+            #time.sleep(10)
+            #os.system("/data1/XXXXX/upload/apache-cat-8.5.71/bin/startup.sh")
+            #logger.info("restart tomcat success")
         else:
             logger.info("remove file %s failed"%(rmpath))
 
