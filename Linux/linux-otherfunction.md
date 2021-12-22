@@ -212,3 +212,65 @@ find . -name "*.c" #将当前目录及其子目录下所有文件后缀为 .c �
 find . -name "*.swp" -type f -delete #remove all .swp files
 ```
 
+## awk
+
+[`awk`](https://en.wikipedia.org/wiki/AWK)是处理文本文件的一个应用程序，几乎所有 Linux 系统都自带这个程序。
+
+它依次处理文件的每一行，并读取里面的每一个字段。对于日志、CSV 那样的每行格式相同的文本文件，`awk`可能是最方便的工具。
+
+与其它大多数UNIX命令不同的是，从名字上看，我们不可能知道awk的功能，因为awk是三个人名的缩写。
+
+### 语法
+
+```
+awk [选项参数] 'script' var=value file(s)
+或
+awk [选项参数] -f scriptfile var=value file(s)
+```
+
+**选项参数说明：**
+
+- -F fs or --field-separator fs
+  指定输入文件折分隔符，fs是一个字符串或者是一个正则表达式，如-F:。
+- -v var=value or --asign var=value
+  赋值一个用户定义变量。
+- -f scripfile or --file scriptfile
+  从脚本文件中读取awk命令。
+- -mf nnn and -mr nnn
+  对nnn值设置内在限制，-mf选项限制分配给nnn的最大块数目；-mr选项限制记录的最大数目。这两个功能是Bell实验室版awk的扩展功能，在标准awk中不适用。
+- -W compact or --compat, -W traditional or --traditional
+  在兼容模式下运行awk。所以gawk的行为和标准的awk完全一样，所有的awk扩展都被忽略。
+- -W copyleft or --copyleft, -W copyright or --copyright
+  打印简短的版权信息。
+- -W help or --help, -W usage or --usage
+  打印全部awk选项和每个选项的简短说明。
+- -W lint or --lint
+  打印不能向传统unix平台移植的结构的警告。
+- -W lint-old or --lint-old
+  打印关于不能向传统unix平台移植的结构的警告。
+- -W posix
+  打开兼容模式。但有以下限制，不识别：/x、函数关键字、func、换码序列以及当fs是一个空格时，将新行作为一个域分隔符；操作符**和**=不能代替^和^=；fflush无效。
+- -W re-interval or --re-inerval
+  允许间隔正则表达式的使用，参考(grep中的Posix字符类)，如括号表达式[[:alpha:]]。
+- -W source program-text or --source program-text
+  使用program-text作为源代码，可与-f命令混用。
+- -W version or --version
+  打印bug报告信息的版本。
+
+### 实例
+
+#### 按符号进行分隔进行判断
+
+`awk`会根据空格和制表符，将每一行分成若干字段，依次用`$1`、`$2`、`$3`代表第一个字段、第二个字段、第三个字段等等。
+
+```bash
+awk -F '|' '$1=="Name"' song.txt
+cat song.txt | awk -F '|' '$1=="Name"' #两种方式使用都可以
+```
+
+#### if函数写复杂判断
+
+```bash
+cat query.txt | awk -F '\t' '{if($1=="国际米兰") print $0; else print "---"}'
+```
+
