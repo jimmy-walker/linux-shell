@@ -14,6 +14,7 @@
     * [Linux other function](Linux/linux-otherfunction.md)
     * [Linux curl](Linux/linux-curl.md)
     * [Linux crontab](Linux/linux-crontab.md)
+    * [Linux self](Linux/linux-self.md)
 * [Shell brief](Shell/shell-brief.md)
     * [Shell echo](Shell/shell-echo.md)
     * [Shell variable](Shell/shell-variable.md)
